@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hook_up_rent/home/index.dart';
+import 'package:hook_up_rent/pages/home/index.dart';
 
 
 void main() {

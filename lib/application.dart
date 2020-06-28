@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:hook_up_rent/pages/login.dart';
+import 'package:fluro/fluro.dart';
+import 'package:hook_up_rent/routes.dart';
 
 class Application extends StatelessWidget {
   Application();
 
   @override
   Widget build(BuildContext context) {
+
+    Router router = Router();
+    Routes.defineRoutes(router);
+
     return MaterialApp(
-      home: LoginPage(),
+      onGenerateRoute: router.generator,
     );
   }
 }
