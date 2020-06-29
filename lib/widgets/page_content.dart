@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hook_up_rent/application.dart';
 import 'package:hook_up_rent/routes.dart';
 
 
@@ -30,7 +31,8 @@ class PageContent extends StatelessWidget {
           ),
           FlatButton(
             onPressed: (){
-              Navigator.pushNamed(context, Routes.login);
+              Application.router.navigateTo(context, "/aaaa");
+              //Navigator.pushNamed(context, Routes.login);
             },
             child: Text('不存在的页面')
           ),
