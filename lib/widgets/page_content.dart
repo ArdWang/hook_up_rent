@@ -31,11 +31,8 @@ class PageContent extends StatelessWidget {
           ),
           FlatButton(
             onPressed: (){
-              print("我被执行了");
-
-              Application.router.navigateTo(context, '/aaa');
-
-              //Navigator.pushNamed(context, '/aaaa');
+              Application.router.navigateTo(context, "/aaaa");
+              //Navigator.pushNamed(context, Routes.login);
             },
             child: Text('不存在的页面')
           ),
