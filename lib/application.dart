@@ -10,10 +10,8 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     router = Router();
-    Routes.defineRoutes(router);
-
+    Routes.configureRoutes(router);
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Colors.green

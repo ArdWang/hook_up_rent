@@ -21,6 +21,7 @@ class Routes{
   });
 
   static Handler _notFoundHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    print("没有找到目标");
     return NotFoundPage();
   });
 
@@ -28,7 +29,7 @@ class Routes{
     return RoomDetailPage(roomId: params['roomId'][0],);
   });
 
-  static void defineRoutes(Router router) {
+  static void configureRoutes(Router router) {
     router.define(home, handler: _homeHandler);
     router.define(login, handler: _loginHandler);
     router.define(roomDetail, handler: _roomDetailHandler);
