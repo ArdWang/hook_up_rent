@@ -4,12 +4,14 @@ import 'package:hook_up_rent/pages/home/index.dart';
 import 'package:hook_up_rent/pages/home_detail/home_detail.dart';
 import 'package:hook_up_rent/pages/login.dart';
 import 'package:hook_up_rent/pages/not_found.dart';
+import 'package:hook_up_rent/pages/register.dart';
 
 
 class Routes{
 
   static String home = '/';
   static String login = '/login';
+  static String register = '/register';
   static String roomDetail = '/room/:roomId';
 
   static Handler _homeHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
@@ -18,6 +20,10 @@ class Routes{
 
   static Handler _loginHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return LoginPage();
+  });
+
+   static Handler _registerHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return RegisterPage();
   });
 
   static Handler _notFoundHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
@@ -32,6 +38,7 @@ class Routes{
   static void configureRoutes(Router router) {
     router.define(home, handler: _homeHandler);
     router.define(login, handler: _loginHandler);
+    router.define(register, handler: _registerHandler);
     router.define(roomDetail, handler: _roomDetailHandler);
     router.notFoundHandler = _notFoundHandler;
   }
