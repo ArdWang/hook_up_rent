@@ -3,13 +3,16 @@ import 'package:fluro/fluro.dart';
 import 'package:hook_up_rent/routes.dart';
 
 class Application extends StatelessWidget {
+
+  static Router router;
+
   Application();
 
   @override
   Widget build(BuildContext context) {
 
-    Router router = Router();
-    Routes.defineRoutes(router);
+    router = Router();
+    Routes.configureRoutes(router);
 
     return MaterialApp(
       onGenerateRoute: router.generator,
